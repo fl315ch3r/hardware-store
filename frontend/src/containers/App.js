@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import './App.css';
-import ToolList from './ToolList';
-import {tools} from './tools';
-import SearchBox from './SearchBox';
-import logo from './resources/img/terran-logo.jpg';
+import ToolList from '../components/ToolList';
+import {tools} from '../tools';
+import Scroll from '../components/Scroll';
+import SearchBox from '../components/SearchBox';
+import NavBar from '../components/NavBar';
+import UpperNavBar from '../components/UpperNavBar';
 
 
 class App extends Component {
@@ -22,11 +24,12 @@ class App extends Component {
 			return tool.description.toLowerCase().includes(this.state.searchfield.toLowerCase());
 		});
 		return(
-			<div className='tc'>
-				<img src={logo} className='img-logo' />
-				<SearchBox searchChange={this.onSearchChange} />
-
-				<ToolList tools={filteredTools} />
+			<div>
+				<UpperNavBar />
+				<NavBar />
+				<div className='container'>
+					<ToolList  tools={filteredTools} />
+				</div>
 			</div>
 		);
 	}

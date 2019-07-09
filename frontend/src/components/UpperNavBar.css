@@ -1,0 +1,25 @@
+.upper-nav{
+	display: flex;
+	justify-content: space-between;
+	color: #ffffff;
+	background-color: #383838;
+}
+.dark-bg{
+	background-color: #383838;
+}
+
+.phone-img{
+	height: 30px;
+	width: 21px;
+	color: #fff;
+	margin: 5px;
+	padding: 0;
+}
+
+a {
+	color: #ffffff;
+}
+
+a:hover{
+	hover: #6ec8ff;
+}
